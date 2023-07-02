@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dfxml xmloutputversion='1.0'>
+  <metadata 
+  xmlns='http://afflib.org/tcpflow/' 
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xmlns:dc='http://purl.org/dc/elements/1.1/'>
+    <dc:type>Feature Extraction</dc:type>
+  </metadata>
+  <creator version='1.0'>
+    <program>TCPFLOW</program>
+    <version>1.6.1</version>
+    <build_environment>
+      <compiler>4.2.1 (Apple LLVM 14.0.0 (clang-1400.0.29.202))</compiler>
+      <CPPFLAGS> -DUTC_OFFSET=+0000</CPPFLAGS>
+      <CFLAGS>-g -g -O3 -MD -Wpointer-arith -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wwrite-strings -Wcast-align -Waggregate-return -Wbad-function-cast -Wcast-qual -Wundef -Wredundant-decls -Wdisabled-optimization -Wfloat-equal -Wmultichar -Wc++-compat -Wmissing-noreturn -Wall -Wstrict-prototypes -MD -D_FORTIFY_SOURCE=2 -Wpointer-arith -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wwrite-strings -Wcast-align -Waggregate-return -Wbad-function-cast -Wcast-qual -Wundef -Wredundant-decls -Wdisabled-optimization -Wfloat-equal -Wmultichar -Wc++-compat -Wmissing-noreturn -Wall -Wstrict-prototypes</CFLAGS>
+      <CXXFLAGS>-g -g -O3 -Wall -MD -D_FORTIFY_SOURCE=2 -Wpointer-arith -Wshadow -Wwrite-strings -Wcast-align -Wredundant-decls -Wdisabled-optimization -Wfloat-equal -Wmultichar -Wmissing-noreturn -Woverloaded-virtual -Wsign-promo -funit-at-a-time -Weffc++ -Wno-address-of-packed-member</CXXFLAGS>
+      <LDFLAGS />
+      <LIBS>-lpcap -lbz2 -lexpat -lcrypto -lsqlite3 -lssl -lmd -lcrypto -ldl -lz </LIBS>
+      <compilation_date>2022-10-27T09:49:20</compilation_date>
+      <library name="boost" version="108000"/>
+      <library name="sqlite" version="3.39.4" source_id="2022-09-07 20:51:41 6bf7a2712125fdc4d559618e3fa3b4944f5a0d8f8a4ae21165610e153f77aapl"/>
+    </build_environment>
+    <execution_environment>
+      <os_sysname>Darwin</os_sysname>
+      <os_release>22.5.0</os_release>
+      <os_version>Darwin Kernel Version 22.5.0: Mon Apr 24 20:53:44 PDT 2023; root:xnu-8796.121.2~5/RELEASE_ARM64_T8103</os_version>
+      <host>Seojuns-MacBook-Air.local</host>
+      <arch>arm64</arch>
+      <command_line>command line to be provided</command_line>
+      <uid>0</uid>
+      <username>root</username>
+      <start_time>2023-06-21T04:19:49Z</start_time>
+    </execution_environment>
+  </creator>
+  <configuration>
+  </configuration>
+  <tdelta>0</tdelta>
+  <configuration>
+    <fileobject>
+      <filesize>0</filesize>
+      <tcpflow startime='2023-06-21T07:58:26.362242Z' endtime='2023-06-21T07:58:26.362242Z' mac_daddr='02:00:00:00:45:00' mac_saddr='00:40:00:00:40:00' family='2' src_ipn='127.0.0.1' dst_ipn='127.0.0.1' srcport='54899' dstport='6667' packets='1' len='68' />
+    </fileobject>
+    <fileobject>
+      <filename>127.000.000.001.06667-127.000.000.001.51438</filename>
+      <filesize>22482</filesize>
+      <tcpflow startime='2023-06-21T04:20:22.632512Z' endtime='2023-06-21T07:58:26.336044Z' mac_daddr='02:00:00:00:45:00' mac_saddr='00:40:00:00:40:00' family='2' src_ipn='127.0.0.1' dst_ipn='127.0.0.1' srcport='6667' dstport='51438' packets='421' len='46070' />
+    </fileobject>
+    <fileobject>
+      <filename>127.000.000.001.51438-127.000.000.001.06667</filename>
+      <filesize>6640</filesize>
+      <tcpflow startime='2023-06-21T04:20:22.632370Z' endtime='2023-06-21T07:58:26.336014Z' mac_daddr='02:00:00:00:45:00' mac_saddr='00:40:00:00:40:00' family='2' src_ipn='127.0.0.1' dst_ipn='127.0.0.1' srcport='51438' dstport='6667' packets='421' len='30228' />
+    </fileobject>
+  </configuration>
+  <summary />
+  <open_fds_at_end>0</open_fds_at_end>
+  <max_open_flows>0</max_open_flows>
+  <total_flows>3</total_flows>
+  <flow_map_size>3</flow_map_size>
+  <total_packets>843</total_packets>
+  <rusage>
+    <utime>2.350201</utime>
+    <stime>19.748198</stime>
+    <maxrss>2605056</maxrss>
+    <minflt>1277</minflt>
+    <majflt>66</majflt>
+    <nswap>0</nswap>
+    <inblock>0</inblock>
+    <oublock>0</oublock>
+    <clocktime>13117.987333</clocktime>
+  </rusage>
+</dfxml>
