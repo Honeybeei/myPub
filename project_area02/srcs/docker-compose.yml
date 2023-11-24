@@ -1,0 +1,64 @@
+volumes:
+  wp:
+    name: wp
+    driver: local
+    driver_opts:
+      type: volume
+      device: /home/seoyoo/data/wp
+      o: bind
+  db:
+    name: db
+    driver: local
+    driver_opts:
+      type: volume
+      o: bind
+      device: /home/seoyoo/data/db
+
+networks:
+  inception-net:
+    driver: bridge
+
+services:
+  mariadb:
+    build: ./requirements/mariadb
+    container_name: mariadb
+    image: mariadb
+    expose:
+      - "3306"
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - inception-net
+    env_file:
+      - .env
+
+  wordpress:
+    build: ./requirements/wordpress
+    container_name: wordpress
+    image: wordpress
+    expose:
+      - "9000"
+    restart: always
+    volumes:
+      - wp:/var/www/html
+    depends_on:
+      - mariadb
+    networks:
+      - inception-net
+    env_file:
+      - .env
+
+  nginx:
+    build: ./requirements/nginx
+    container_name: nginx
+    image: nginx
+    ports:
+      - 443:443
+    restart: always
+    volumes:
+      - wp:/var/www/html
+    depends_on:
+      - wordpress
+    networks:
+      - inception-net
